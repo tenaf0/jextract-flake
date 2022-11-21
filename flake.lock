@@ -1,0 +1,57 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "type": "github"
+      },
+      "original": {
+        "id": "flake-utils",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1669029319,
+        "narHash": "sha256-EdTqXZ/xBk7xjSCPGNbL0WnoWHEkYjwe78C6gZoUC0E=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "79bb815a1cdc789f6b036d2047e217ab3e989fff",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs-jdk19": {
+      "locked": {
+        "lastModified": 1668632931,
+        "narHash": "sha256-gmbjDko9NoWVksDUzLeTmeDXxC3dIfDORvOoxm4pqa0=",
+        "owner": "jerith666",
+        "repo": "nixpkgs",
+        "rev": "7d81f31b904ee5c7149d09448f8f5e6af4456c74",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jerith666",
+        "ref": "openjdk-19",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-jdk19": "nixpkgs-jdk19"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
