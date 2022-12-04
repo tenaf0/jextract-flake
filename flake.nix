@@ -1,17 +1,14 @@
 {
   description = "A flake file for building jextract";
 
-  inputs.nixpkgs-jdk19.url = github:jerith666/nixpkgs/openjdk-19;
-
-  outputs = { self, nixpkgs, nixpkgs-jdk19, flake-utils }: 
+  outputs = { self, nixpkgs, flake-utils }: 
 
   flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = nixpkgs.legacyPackages.${system};
-      openjdk19 = nixpkgs-jdk19.legacyPackages.${system}.pkgs.openjdk19;
 
       envVars = ''
-          export OPENJDK19=${openjdk19}
+          export OPENJDK19=${pkgs.openjdk19}
           export LIBCLANG=${pkgs.libclang.lib}
         '';
     in {

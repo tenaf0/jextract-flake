@@ -16,11 +16,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1669029319,
-        "narHash": "sha256-EdTqXZ/xBk7xjSCPGNbL0WnoWHEkYjwe78C6gZoUC0E=",
+        "lastModified": 1670086663,
+        "narHash": "sha256-hT8C8AQB74tdoCPwz4nlJypLMD7GI2F5q+vn+VE/qQk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "79bb815a1cdc789f6b036d2047e217ab3e989fff",
+        "rev": "813836d64fa57285d108f0dbf2356457ccd304e3",
         "type": "github"
       },
       "original": {
@@ -28,27 +28,10 @@
         "type": "indirect"
       }
     },
-    "nixpkgs-jdk19": {
-      "locked": {
-        "lastModified": 1668632931,
-        "narHash": "sha256-gmbjDko9NoWVksDUzLeTmeDXxC3dIfDORvOoxm4pqa0=",
-        "owner": "jerith666",
-        "repo": "nixpkgs",
-        "rev": "7d81f31b904ee5c7149d09448f8f5e6af4456c74",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jerith666",
-        "ref": "openjdk-19",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "nixpkgs-jdk19": "nixpkgs-jdk19"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
