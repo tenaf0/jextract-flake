@@ -16,11 +16,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1670086663,
-        "narHash": "sha256-hT8C8AQB74tdoCPwz4nlJypLMD7GI2F5q+vn+VE/qQk=",
+        "lastModified": 1671249438,
+        "narHash": "sha256-5e+CcnbZA3/i2BRXbnzRS52Ly67MUNdZR+Zpbb2C65k=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "813836d64fa57285d108f0dbf2356457ccd304e3",
+        "rev": "067bfc6c90a301572cec7da48f09c447a9a8eae0",
         "type": "github"
       },
       "original": {
@@ -28,10 +28,27 @@
         "type": "indirect"
       }
     },
+    "nixpkgs-jdk20": {
+      "locked": {
+        "lastModified": 1671277997,
+        "narHash": "sha256-BPBxZV2ED7eD6wGXx6or3Q6Gw+ts6mUO59L07ONDIPI=",
+        "owner": "tenaf0",
+        "repo": "nixpkgs",
+        "rev": "8d82d330df8a2e938445416157ea4c3f47e1dcbc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tenaf0",
+        "ref": "openjdk20",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-jdk20": "nixpkgs-jdk20"
       }
     }
   },
