@@ -27,8 +27,8 @@
         src = pkgs.fetchFromGitHub {
           owner = "openjdk";
           repo = "jextract";
-          rev = "61c3e33b1f622ce1661d1525a07c67d273461de1";
-          sha256 = "sha256-PRqu+Eo6byBg8Y+quIcRwwAWEzV58tMazIX5gzWBEcw=";
+          rev = "cf3afe9ca71592c8ebb32f219707285dd1d5b28a";
+          sha256 = "sha256-8qRD1Xg39vxtFAdguD8XvkQ8u7YzFU55MhyyJozVffo=";
         };
 
         buildInputs = [ pkgs.gradle ];
