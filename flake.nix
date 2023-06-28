@@ -2,7 +2,7 @@
   description = "A flake file for building jextract";
 
   inputs = {
-    nixpkgs-jdk20.url = "github:tenaf0/nixpkgs/openjdk20";
+    nixpkgs-jdk20.url = "github:tenaf0/nixpkgs/jdk20";
   };
 
   outputs = { self, nixpkgs, flake-utils, nixpkgs-jdk20 }: 

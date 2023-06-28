@@ -30,16 +30,16 @@
     },
     "nixpkgs-jdk20": {
       "locked": {
-        "lastModified": 1671277997,
-        "narHash": "sha256-BPBxZV2ED7eD6wGXx6or3Q6Gw+ts6mUO59L07ONDIPI=",
+        "lastModified": 1687990975,
+        "narHash": "sha256-sX1aQGiizW6WQi3XAxMgLJV0/JDggvMTdzZx1JoDivg=",
         "owner": "tenaf0",
         "repo": "nixpkgs",
-        "rev": "8d82d330df8a2e938445416157ea4c3f47e1dcbc",
+        "rev": "dc83731d057e2ded797e26c3c614b81c4935fc8d",
         "type": "github"
       },
       "original": {
         "owner": "tenaf0",
-        "ref": "openjdk20",
+        "ref": "jdk20",
         "repo": "nixpkgs",
         "type": "github"
       }
