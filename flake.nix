@@ -1,24 +1,20 @@
 {
   description = "A flake file for building jextract";
 
-  inputs = {
-    nixpkgs-jdk20.url = "github:tenaf0/nixpkgs/jdk20";
-  };
-
-  outputs = { self, nixpkgs, flake-utils, nixpkgs-jdk20 }: 
+  outputs = { self, nixpkgs, flake-utils }: 
 
   flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = nixpkgs.legacyPackages.${system};
-      openjdk20 = nixpkgs-jdk20.legacyPackages.${system}.openjdk20;
+      openjdk21 = pkgs.openjdk21;
 
       envVars = ''
-          export OPENJDK20=${openjdk20}
+          export OPENJDK21=${openjdk21}
           export LIBCLANG=${pkgs.libclang.lib}
         '';
     in {
       devShell = pkgs.mkShell {
-        buildInputs = [ pkgs.openjdk17 ];
+        buildInputs = [ pkgs.openjdk21 ];
         shellHook = envVars;
       };
 
@@ -27,15 +23,15 @@
         src = pkgs.fetchFromGitHub {
           owner = "openjdk";
           repo = "jextract";
-          rev = "cf3afe9ca71592c8ebb32f219707285dd1d5b28a";
-          sha256 = "sha256-8qRD1Xg39vxtFAdguD8XvkQ8u7YzFU55MhyyJozVffo=";
+          rev = "e961434163ea5c53bbeee9fed1ecf819811ca962";
+          sha256 = "sha256-GIpkBVfvZNav3a7i1e9lioS1C6V4C9K9oELt8Zom3v0=";
         };
 
-        buildInputs = [ pkgs.gradle ];
+        buildInputs = [ (pkgs.gradle_8.override { java = openjdk21; }) ];
 
         buildPhase = envVars + ''
 
-          gradle -Pjdk20_home=$OPENJDK20 -Pllvm_home=$LIBCLANG clean verify
+          gradle -Pjdk21_home=$OPENJDK21 -Pllvm_home=$LIBCLANG clean verify
         '';
 
         installPhase = ''
