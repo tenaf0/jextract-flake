@@ -6,15 +6,15 @@
   flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = nixpkgs.legacyPackages.${system};
-      openjdk21 = pkgs.openjdk21;
+      openjdk22 = pkgs.openjdk22;
 
       envVars = ''
-          export OPENJDK21=${openjdk21}
+          export OPENJDK22=${openjdk22}
           export LIBCLANG=${pkgs.libclang.lib}
         '';
     in {
       devShell = pkgs.mkShell {
-        buildInputs = [ pkgs.openjdk21 ];
+        buildInputs = [ openjdk22 ];
         shellHook = envVars;
       };
 
@@ -23,15 +23,15 @@
         src = pkgs.fetchFromGitHub {
           owner = "openjdk";
           repo = "jextract";
-          rev = "0f87c6cdd5d63a7148deb38e16ed4de1306a4573";
-          sha256 = "sha256-Bji7I6LNMs70drGo5+75OClCrxhOsoLV2V7Wdct6494=";
+          rev = "b9ec8879cff052b463237fdd76382b3a5cd8ff2b";
+          sha256 = "sha256-+4AM8pzXPIO/CS3+Rd/jJf2xDvAo7K7FRyNE8rXvk5U=";
         };
 
-        buildInputs = [ (pkgs.gradle_8.override { java = openjdk21; }) ];
+        buildInputs = [ (pkgs.gradle_8.override { java = pkgs.openjdk21; }) ];
 
         buildPhase = envVars + ''
 
-          gradle -Pjdk21_home=$OPENJDK21 -Pllvm_home=$LIBCLANG clean verify
+          gradle -Pjdk22_home=$OPENJDK22 -Pllvm_home=$LIBCLANG clean verify
         '';
 
         installPhase = ''
