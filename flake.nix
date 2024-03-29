@@ -23,8 +23,8 @@
         src = pkgs.fetchFromGitHub {
           owner = "openjdk";
           repo = "jextract";
-          rev = "e961434163ea5c53bbeee9fed1ecf819811ca962";
-          sha256 = "sha256-GIpkBVfvZNav3a7i1e9lioS1C6V4C9K9oELt8Zom3v0=";
+          rev = "0f87c6cdd5d63a7148deb38e16ed4de1306a4573";
+          sha256 = "sha256-Bji7I6LNMs70drGo5+75OClCrxhOsoLV2V7Wdct6494=";
         };
 
         buildInputs = [ (pkgs.gradle_8.override { java = openjdk21; }) ];
