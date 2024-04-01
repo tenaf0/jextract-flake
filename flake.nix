@@ -10,7 +10,7 @@
 
       envVars = ''
           export OPENJDK22=${openjdk22}
-          export LIBCLANG=${pkgs.libclang.lib}
+          export LIBCLANG=${pkgs.llvmPackages_14.libclang.lib}
         '';
     in {
       devShell = pkgs.mkShell {
